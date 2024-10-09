@@ -1,0 +1,23 @@
+.displayContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px solid yellow; */
+   
+}
+
+.outerLabel{
+    padding: 5rem 0;
+    position: relative;
+}
+
+.inputDisplay{
+    width: 100%;
+}
+
+.deleteContainer{
+    position: relative;
+}
+
+.deleteLogo{
+}
