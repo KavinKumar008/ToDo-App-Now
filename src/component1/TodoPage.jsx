@@ -5,12 +5,13 @@ import DisplayValue from "../textdisplay/DisplayValue";
 
 const TodoPage = () => {
   const [inputValue, setInputValue] = useState("");
-  const [showData, setShowData] = useState(false);
+  const [displayData, setDisplayData] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowData(true);
+    setDisplayData(true);
   };
+
   return (
     <main className={Style.mainContainer}>
       <div className={Style.title}>
@@ -36,15 +37,8 @@ const TodoPage = () => {
       </label>
 
       <hr />
-      {showData ? (
-        <ul>
-          <li>{inputValue}</li>
-        </ul>
-      ) : (
-        <span>{showData}</span>
-      )}
 
-      <DisplayValue />
+      {displayData ? <DisplayValue inputValue={inputValue} /> : null}
     </main>
   );
 };

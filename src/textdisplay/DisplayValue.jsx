@@ -1,17 +1,27 @@
 import React from "react";
 import Style from "../textdisplay/style.module.css";
-import { MdOutlineDelete } from "react-icons/md";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { MdDelete, MdOutlineEditNote } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+import { FaDeleteLeft } from "react-icons/fa6";
 
-const DisplayValue = () => {
+const DisplayValue = ({ inputValue }) => {
   return (
-    <div className={Style.displayContainer}>
-      <label className={Style.outerLabel}>
-        <input type="text" className={Style.inputDisplay} />
-      </label>
-      <div className={Style.deleteContainer}>
-        <MdOutlineDelete className={Style.deleteLogo} />
+    <main className={Style.displayContainer}>
+      <div type="text" className={Style.inputDisplay}>
+        <div className={Style.inputChild}>
+          <h1 className={Style.displayData}>{inputValue}</h1>
+          <div className={Style.btns}>
+            <button className={Style.logos}>
+              <FaEdit fontSize={22} className={Style.editLogo} />
+            </button>
+            <button className={Style.logos}>
+              <MdDelete fontSize={24} className={Style.deleteLogo} />
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

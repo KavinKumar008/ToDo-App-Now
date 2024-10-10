@@ -1,23 +1,116 @@
-.displayContainer{
+/* .displayContainer{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 3px solid yellow; */
    
 }
 
 .outerLabel{
+    width: 80vw;
+    display: flex;
     padding: 5rem 0;
-    position: relative;
 }
 
 .inputDisplay{
-    width: 100%;
+    position: relative;
+    flex: 1;
+    padding: 1.5rem 1rem;
+    font-size: 18px;
+    border-radius: 3rem;
+    outline: none;
+    border: none;
+    background-color: white;
+    border: 2px solid blue;
+    color: black;
 }
 
-.deleteContainer{
+.logos{
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    right: 0;
+    border-radius: 3rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+} */
+
+
+
+
+
+/* .border{
+    width: 50vw;
     position: relative;
+    border: 2px solid blue;
+    padding: 1.2rem 0;
+    background-color: #222222;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+}
+
+.values{
+    padding: 0 1rem;
 }
 
 .deleteLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    position: absolute;
+    right: 0;
+    font-size: 28px;
+    background-color: lightgray;
+    margin-bottom: 30px;
+} */
+
+
+.displayContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.displayData{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    overflow: hidden;
+}
+
+.inputDisplay{
+    width: 80vw;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inputChild{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;   
+    gap: 1rem;
+}
+
+.logos{
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: transparent;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
