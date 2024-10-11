@@ -5,18 +5,24 @@ import DisplayValue from "../textdisplay/DisplayValue";
 
 const TodoPage = () => {
   const [inputValue, setInputValue] = useState("");
-  const [displayData, setDisplayData] = useState(false);
+  const [storeData, setStoreData] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setDisplayData(true);
+  const handleSubmit = () => {
+    setStoreData((prev) => [...prev, inputValue]);
+    setInputValue("");
   };
+
+  function deleteData(index) {
+    setStoreData(storeData.filter((_, ind) => ind !== index));
+  }
+
+  function editData() {}
 
   return (
     <main className={Style.mainContainer}>
       <div className={Style.title}>
         <h1 className={Style.appName}>
-          <span style={{ fontSize: "2.5rem" }}>TO-DO NOW</span>
+          <span>TO-DO NOW</span>
         </h1>
         <div className={Style.logoContainer}>
           <span>
@@ -29,16 +35,25 @@ const TodoPage = () => {
           type="text"
           className={Style.inputBox}
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+          }}
         />
-        <button className={Style.btn} onClick={handleSubmit}>
-          Add Task
-        </button>
+        <div className={Style.btns}>
+          <button
+            disabled={!inputValue}
+            className={Style.btn}
+            onClick={handleSubmit}
+          >
+            Add task
+          </button>
+        </div>
       </label>
-
-      <hr />
-
-      {displayData ? <DisplayValue inputValue={inputValue} /> : null}
+      {storeData.map((item, ind) => (
+        <div key={ind}>
+          <DisplayValue item={item} ind={ind} deleteData={deleteData} />
+        </div>
+      ))}
     </main>
   );
 };

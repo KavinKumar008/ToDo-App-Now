@@ -1,4 +1,4 @@
-.mainContainer{
+/* .mainContainer{
     width: 100vw;
     height: 100vh;
     background-color: #343a40;
@@ -88,4 +88,105 @@
     font-style: italic;
     border: none;
     
+} */
+
+
+
+
+/* New styling */
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.appName{
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.appName::before,.appName::after{
+    width: 5vw;
+    content: "";
+    flex: 1 1;
+    border: 0.1rem solid #fff;
+    margin: auto;
+}
+
+.logoContainer{
+    display: flex;
+    font-size: 30px;
+    gap: 2rem;
+}
+
+.logoContainer::before,.logoContainer::after{
+    width: 30vw;
+   content: "";
+   flex: 1 1;
+   border: 0.1rem solid #fff;
+   margin: auto;
+}
+
+.formInner{
+    display: flex;
+    width: 80vw;
+    padding: unset;
+    position: relative;
+}
+
+.inputBox{
+    width: 100vw;
+    padding: 0.9rem;
+    border-radius: 1.4rem;
+    font-size: 18px;
+    outline: none;
+}
+
+.btn{
+    position: absolute;
+    display: flex;
+    right: 0;
+    padding: 0.8rem 3rem;
+    border: none;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 1.4rem;
+    color: #fff;
+    background-color: #4f4f4f;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:518px){
+    
+    .formInner{
+        width: 100vw;
+        display: block;
+    }
+    
+    .btn{
+       width: 100vw;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 2rem;
+    }
 }
