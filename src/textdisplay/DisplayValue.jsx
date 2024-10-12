@@ -3,9 +3,13 @@ import Style from "../textdisplay/style.module.css";
 import { MdDelete, MdOutlineEditNote } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 
-const DisplayValue = ({ item, deleteData, ind }) => {
+const DisplayValue = ({ item, deleteData, ind, editData }) => {
   function getItem(itm) {
     deleteData(itm);
+  }
+
+  function getData(edti) {
+    editData(edti);
   }
 
   return (
@@ -15,7 +19,11 @@ const DisplayValue = ({ item, deleteData, ind }) => {
           <h1 className={Style.displayData}>{item}</h1>
           <div className={Style.btns}>
             <button className={Style.logos}>
-              <FaEdit fontSize={22} className={Style.editLogo} />
+              <FaEdit
+                fontSize={22}
+                className={Style.editLogo}
+                onClick={() => getData(ind)}
+              />
             </button>
             <button className={Style.logos}>
               <MdDelete

@@ -16,7 +16,16 @@ const TodoPage = () => {
     setStoreData(storeData.filter((_, ind) => ind !== index));
   }
 
-  function editData() {}
+  function editData(itemIn) {
+    setStoreData(
+      storeData.forEach((ele, i, array) => {
+        if (i === itemIn) {
+          i = ele;
+        }
+        console.log(i);
+      })
+    );
+  }
 
   return (
     <main className={Style.mainContainer}>
@@ -51,7 +60,12 @@ const TodoPage = () => {
       </label>
       {storeData.map((item, ind) => (
         <div key={ind}>
-          <DisplayValue item={item} ind={ind} deleteData={deleteData} />
+          <DisplayValue
+            item={item}
+            ind={ind}
+            deleteData={deleteData}
+            editData={editData}
+          />
         </div>
       ))}
     </main>
