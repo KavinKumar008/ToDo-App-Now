@@ -118,6 +118,7 @@
     display: flex;
     gap: 1rem;
     font-size: 3rem;
+    color: #fff;
     font-style: italic;
     font-weight: bolder;
 }
@@ -134,6 +135,7 @@
     display: flex;
     font-size: 30px;
     gap: 2rem;
+    color: #fff;
 }
 
 .logoContainer::before,.logoContainer::after{

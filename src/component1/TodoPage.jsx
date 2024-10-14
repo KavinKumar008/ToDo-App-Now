@@ -16,16 +16,14 @@ const TodoPage = () => {
     setStoreData(storeData.filter((_, ind) => ind !== index));
   }
 
-  function editData(itemIn) {
-    setStoreData(
-      storeData.forEach((ele, i, array) => {
-        if (i === itemIn) {
-          i = ele;
-        }
-        console.log(i);
-      })
-    );
-  }
+  // function eData(value, eIndex) {
+  //   setStoreData(
+  //     storeData.map((ele, i, array) => {
+  //       if (eIndex === i) {
+  //       }
+  //     })
+  //   );
+  // }
 
   return (
     <main className={Style.mainContainer}>
@@ -64,7 +62,8 @@ const TodoPage = () => {
             item={item}
             ind={ind}
             deleteData={deleteData}
-            editData={editData}
+            storeData={storeData}
+            // eData={eData}
           />
         </div>
       ))}
