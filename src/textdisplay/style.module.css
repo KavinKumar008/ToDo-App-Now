@@ -70,7 +70,7 @@
 
 
 .displayContainer{
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
@@ -92,10 +92,11 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.inputChild{
+.innerField{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .btns{
@@ -113,4 +114,10 @@
     font-size: 22px;
     background-color: transparent;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+
+
+.setField{
+    
 }

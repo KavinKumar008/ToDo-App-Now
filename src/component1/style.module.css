@@ -99,10 +99,10 @@
     width: 100vw;
     height: 100vh;
     background-color: #1e1e1e;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: column; */
 }
 
 .title{
@@ -112,6 +112,7 @@
     flex-direction: column;
     gap: 1rem;
     font-size: 1.5rem;
+    padding: 3rem;
 }
 
 .appName{
@@ -144,6 +145,12 @@
    flex: 1 1;
    border: 0.1rem solid #fff;
    margin: auto;
+}
+
+.formMainOuter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .formInner{

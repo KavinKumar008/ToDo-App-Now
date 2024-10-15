@@ -3,12 +3,12 @@ import Style from "../textdisplay/style.module.css";
 import { MdDelete, MdOutlineEditNote } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 
-const DisplayValue = ({ item, deleteData, ind }) => {
+const DisplayValue = ({ item, deleteData, ind, eData }) => {
   const [editBox, setEditBox] = useState(false);
-  const [inputs, setInputs] = useState([]);
-  const [store, setStore] = useState([]);
-  function getItem(itm) {
-    deleteData(itm);
+  const [inputs, setInputs] = useState("");
+
+  function getItem(ind) {
+    deleteData(ind);
   }
 
   function editData() {
@@ -16,25 +16,20 @@ const DisplayValue = ({ item, deleteData, ind }) => {
     setInputs(item);
   }
 
-  const setClick = () => {
-    setStore([inputs]);
-    setInputs("");
-  };
-
+  function setClick(ind, inputs) {
+    eData(ind, inputs);
+  }
   return (
     <main key={ind} className={Style.displayContainer}>
       <div type="text" className={Style.inputDisplay}>
-        <div className={Style.inputChild}>
-          <h1 className={Style.displayData}>
-            {editBox ? null : item}
-            {/* {store} */}
-          </h1>
+        <div className={Style.innerField}>
+          <h1 className={Style.displayData}>{item}</h1>
           <div className={Style.btns}>
             <button className={Style.logos}>
               <FaEdit
                 fontSize={22}
                 className={Style.editLogo}
-                onClick={() => editData(ind)}
+                onClick={() => editData()}
               />
             </button>
             <button className={Style.logos}>
@@ -47,18 +42,20 @@ const DisplayValue = ({ item, deleteData, ind }) => {
           </div>
         </div>
       </div>
-      {editBox ? (
-        <div>
-          <input
-            type="text"
-            value={inputs}
-            onChange={(e) => setInputs(e.target.value)}
-          />
-          <button type="submit" onClick={setClick}>
-            Set
-          </button>
-        </div>
-      ) : null}
+      <div>
+        {editBox ? (
+          <div className={Style.setField}>
+            <input
+              type="text"
+              value={inputs}
+              onChange={(e) => setInputs(e.target.value)}
+            />
+            <button type="submit" onClick={() => setClick(ind, inputs)}>
+              Set
+            </button>
+          </div>
+        ) : null}
+      </div>
     </main>
   );
 };
