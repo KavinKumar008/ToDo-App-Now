@@ -13,7 +13,11 @@ const TodoPage = () => {
   };
 
   function eData(eIndex, einput) {
-    storeData[eIndex] = einput;
+    setStoreData((prevStoreData) => {
+      const updatedStoreData = [...prevStoreData];
+      updatedStoreData[eIndex] = einput;
+      return updatedStoreData;
+    });
     console.log(eIndex, einput);
   }
 

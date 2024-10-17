@@ -118,6 +118,30 @@
 
 
 
+
+/* Edit inputs */
+
+
+.editField{
+
+    margin-top: 1rem;
+}
+
 .setField{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputBtn,.inputField{
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.inputBtn{
+  cursor: pointer;   
 }
