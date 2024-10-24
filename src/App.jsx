@@ -1,14 +1,14 @@
 import React from "react";
 import TodoPage from "./component1/TodoPage";
-import LoginPage from "./loginpage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FirstPage from "./frontpage/FirstPage";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/todopage" element={<TodoPage />} />
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/todoPage" element={<TodoPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,173 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    gap: 6rem;
+}
+
+.leftContainer {
+    width: 100%;
+    background-size: cover;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.leftTop {
+  text-align: center;
+}
+
+.leftBottom{
+    text-align: center;
+}
+
+.leftTitlePara {
+    font-size: small;
+}
+
+.leftTitleParas{
+    line-height: 3rem;
+}
+
+
+
+.rightContainer {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.rightInnerContainer{
+   display: flex;
+   justify-content: space-around; 
+   flex-direction: column;
+   font-size: 15px;
+   gap: 1rem;
+    }
+
+.innerForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    padding: 0.3rem;
+    border-radius: 6px;
+}
+
+.rightBtns, .leftBtns{
+    padding: 1rem 4rem;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.leftBtns{
+    background-color: #3a86ff;
+    color: #fff;
+}
+
+.rightBtns{
+    color: #ccc;
+}
+
+.formContainer{
+    font-size: 13px;
+    
+}
+
+.emailId{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.inputField{
+    width: 60%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #90e0ef;
+}
+
+.boxPara{
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftPass{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rightPass{
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.paras{
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.sBtn{
+    width: 60%;
+    padding: 0.6rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #3a86ff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.spanHead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+}
+
+/* .footerImg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+} */
+
+.logos{
+    padding: 1.3rem 3rem;
+    /* border-radius: 4px;
+    border: 1px solid #90e0ef; */
+} 
+
+
+.resetBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
