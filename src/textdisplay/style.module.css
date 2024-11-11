@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1.3rem;
 }
 
 .displayData{
@@ -73,4 +73,10 @@
 
 .inputBtn{
   cursor: pointer;   
+}
+
+.timeParent{
+    display: flex;
+    justify-content: end;
+    color: yellow;
 }
