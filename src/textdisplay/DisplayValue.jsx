@@ -13,7 +13,7 @@ const DisplayValue = ({ item, deleteData, ind, eData, storeTime }) => {
 
   function editData() {
     setEditBox(true);
-    setInputs(inputs);
+    setInputs(item.task);
   }
 
   function setClick(ind, inputs) {

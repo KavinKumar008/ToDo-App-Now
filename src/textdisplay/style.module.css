@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.3rem;
+    margin-top: 2rem;
 }
 
 .displayData{
@@ -80,3 +80,13 @@
     justify-content: end;
     color: yellow;
 }
+
+
+ /* media query */
+
+ @media screen and (max-width:508px){
+    .inputDisplay{
+        width: 100vw;
+        margin-top: 3rem;
+    }
+ }
