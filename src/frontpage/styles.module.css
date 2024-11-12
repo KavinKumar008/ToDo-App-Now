@@ -1,6 +1,7 @@
 .mainContainer {
     display: flex;
     justify-content: space-around;
+    background-color: white;
     width: 100vw;
     height: 100vh;
     padding: 1rem;
@@ -124,12 +125,12 @@
     line-height: 1.5rem;
 }
 
-.btn{
+/* .btn{
     display: flex;
     align-items: center;
     justify-content: center;
   
-}
+} */
 
 .sBtn{
     width: 60%;

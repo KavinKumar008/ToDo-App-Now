@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Style from "../textdisplay/style.module.css";
+import styles from "../textdisplay/style.module.css";
 import { MdDelete, MdOutlineEditNote } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 
@@ -13,7 +13,7 @@ const DisplayValue = ({ item, deleteData, ind, eData }) => {
 
   function editData() {
     setEditBox(true);
-    setInputs(item);
+    setInputs(item.task);
   }
 
   function setClick(ind, inputs) {
@@ -22,47 +22,50 @@ const DisplayValue = ({ item, deleteData, ind, eData }) => {
   }
 
   return (
-    <main key={ind} className={Style.displayContainer}>
+    <main key={ind} className={styles.displayContainer}>
       <div>
-        <div type="text" className={Style.inputDisplay}>
-          <div className={Style.innerField}>
-            <h1 className={Style.displayData}>{item}</h1>
-            <div className={Style.btns}>
-              <button className={Style.logos}>
+        <div type="text" className={styles.inputDisplay}>
+          <div className={styles.innerField}>
+            <h1 className={styles.displayData}>{item.task}</h1>
+            <div className={styles.btns}>
+              <button className={styles.logos}>
                 <FaEdit
                   fontSize={22}
-                  className={Style.editLogo}
+                  className={styles.editLogo}
                   onClick={() => editData()}
                 />
               </button>
-              <button className={Style.logos}>
+              <button className={styles.logos}>
                 <MdDelete
                   fontSize={24}
-                  className={Style.deleteLogo}
+                  className={styles.deleteLogo}
                   onClick={() => getItem(ind)}
                 />
               </button>
             </div>
           </div>
         </div>
-        <div className={Style.editField}>
+        <div className={styles.editField}>
           {editBox ? (
-            <div className={Style.setField}>
+            <div className={styles.setField}>
               <input
                 type="text"
                 value={inputs}
                 onChange={(e) => setInputs(e.target.value)}
-                className={Style.inputField}
+                className={styles.inputField}
               />
               <button
                 type="submit"
                 onClick={() => setClick(ind, inputs)}
-                className={Style.inputBtn}
+                className={styles.inputBtn}
               >
                 Set
               </button>
             </div>
           ) : null}
+        </div>
+        <div className={styles.timeParent}>
+          <span>Task added at:{item.time}</span>
         </div>
       </div>
     </main>

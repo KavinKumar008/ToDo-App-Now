@@ -2,36 +2,56 @@ import React, { useEffect, useState } from "react";
 import Style from "../component1/style.module.css";
 import { FaRegEdit } from "react-icons/fa";
 import DisplayValue from "../textdisplay/DisplayValue";
+import WeatherPage from "../weatherpage/WeatherPage";
 
 const TodoPage = () => {
   const [inputValue, setInputValue] = useState("");
-  const [storeData, setStoreData] = useState([]);
+  // const [storeData, setStoreData] = useState([]);
+  // const [storeTime, setStoreTime] = useState([]);
+  const [displayTasks, setDisplayTasks] = useState([]);
 
   const handleSubmit = () => {
-    setStoreData((prev) => [...prev, inputValue]);
+    const currentTime = new Date().toLocaleTimeString();
+    // setStoreData((prev) => [...prev, inputValue]);
+    // setStoreTime((prevTime) => [...prevTime, currentTime]);
+    setDisplayTasks((prev) => [
+      ...prev,
+      { task: inputValue, time: currentTime },
+    ]);
     setInputValue("");
   };
 
   function eData(eIndex, einput) {
-    setStoreData((prevStoreData) => {
-      const updatedStoreData = [...prevStoreData];
-      updatedStoreData[eIndex] = einput;
-      return updatedStoreData;
-    });
     console.log(eIndex, einput);
+    const currentTime = new Date().toLocaleTimeString();
+    setDisplayTasks((prevValues) => {
+      const updatedStoreData = [...prevValues];
+      updatedStoreData[eIndex] = { task: einput, time: currentTime };
+      console.log(updatedStoreData);
+      return updatedStoreData;
+      // updatedStoreData[{ eIndex }] = [{ einput }];
+      // return updatedStoreData;
+    });
+    // setStoreData((prevStoreData) => {
+    //   const updatedStoreData = [...prevStoreData];
+    //   updatedStoreData[eIndex] = einput;
+    //   return updatedStoreData;
+    // });
   }
+  // console.log(displayTasks);
 
   function deleteData(index) {
-    setStoreData(storeData.filter((_, ind) => ind !== index));
+    // setStoreData(storeData.filter((_, ind) => ind !== index));
+    setDisplayTasks(displayTasks.filter((_, ind) => ind !== index));
   }
-  console.log(storeData);
 
   return (
     <main className={Style.mainContainer}>
       <div className={Style.title}>
         <h1 className={Style.appName}>
-          <span>TO-DO NOW</span>
+          <span>TO-DO </span>
         </h1>
+        <WeatherPage />
         <div className={Style.logoContainer}>
           <span>
             <FaRegEdit className={Style.logo} />
@@ -59,7 +79,7 @@ const TodoPage = () => {
           </div>
         </label>
       </div>
-      {storeData.map((item, ind) => (
+      {displayTasks.map((item, ind) => (
         <div key={ind}>
           <DisplayValue
             item={item}
