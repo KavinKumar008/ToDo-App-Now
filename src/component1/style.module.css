@@ -101,7 +101,7 @@ body{
 
 .mainContainer{
     /* width: 100vw;
-    height: 100vh; */
+    height: auto; */
     background-color: #1e1e1e;
     /* display: flex;
     align-items: center;

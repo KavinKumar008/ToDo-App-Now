@@ -3,7 +3,7 @@ import styles from "../textdisplay/style.module.css";
 import { MdDelete, MdOutlineEditNote } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 
-const DisplayValue = ({ item, deleteData, ind, eData }) => {
+const DisplayValue = ({ item, deleteData, ind, eData, storeTime }) => {
   const [editBox, setEditBox] = useState(false);
   const [inputs, setInputs] = useState("");
 
@@ -18,7 +18,7 @@ const DisplayValue = ({ item, deleteData, ind, eData }) => {
 
   function setClick(ind, inputs) {
     eData(ind, inputs);
-    setEditBox();
+    setEditBox(false);
   }
 
   return (
